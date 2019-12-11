@@ -4,9 +4,9 @@ from settings import CITIES_CSV_FILE
 
 
 def create_golden_master():
-    datas = show_file('../../' + CITIES_CSV_FILE)
+    datas = get_data_frame_from_csv('../../' + CITIES_CSV_FILE)
     f = open("golden-master.txt", "w+", encoding='utf-8')
-    f.write(datas.to_string())
+    f.write(datas.head(10).to_string())
     f.close()
     print("File created")
 
