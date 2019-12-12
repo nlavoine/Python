@@ -10,9 +10,10 @@ def get_data_frame_from_csv(file_path):
 
 
 # Sort cities by specific column
-# def sort_column():
-#     data_frame2 = data_frame.sort_values(by=['A15'], ascending=False)
-#     data_frame2.head(-1)
+def sort_column(file_path, column):
+    data_frame = get_data_frame_from_csv(file_path)
+    data_frame = data_frame.sort_values(by=[column], ascending=False)
+    return data_frame.head(-1)
 
 
 

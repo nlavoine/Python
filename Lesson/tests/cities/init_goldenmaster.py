@@ -1,5 +1,5 @@
 
-from apps.cities.cities import *
+from apps.cities.cities import get_data_frame_from_csv
 from settings import CITIES_CSV_FILE
 
 
